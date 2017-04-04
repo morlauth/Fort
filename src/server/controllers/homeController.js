@@ -1,5 +1,7 @@
 module.exports = {
 	index: function(req, res) {
-		res.send('It Works!');
+		var info = req.body;
+		
+		res.render('home.ejs', {page: 'home'});
 	}
 }
