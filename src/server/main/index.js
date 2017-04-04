@@ -30,6 +30,20 @@ Routes.forEach(function(el) {
 	});
 });
 
+// Gulp compiling
+const spawn = require('child_process').spawn;
+const ls = spawn('gulp', {cwd: `${__dirname}/../../assets`});
+
+ls.stdout.on('data', (data) => {
+	console.log(`${data}`);
+});
+ls.stderr.on('data', (data) => {
+	console.log(`${data}`);
+});
+ls.on('close', (data) => {
+	console.log('Gulp ended: ' + `${data}`);
+});
+
 app.listen(3000, function() {
 	console.log(chalk.cyan('App started on port 3000'));
 });
