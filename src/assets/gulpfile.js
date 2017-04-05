@@ -23,7 +23,7 @@ gulp.task('less', function() {
 		.pipe(gulp.dest('../public/css'));
 });
 gulp.task('react', function() {
-	gulp.src('js/*.jsx')
+	gulp.src(['js/home.jsx', 'js/wrapper.jsx', 'js/main.jsx'])
 		.pipe(babel({presets: ['react', 'es2016']}))
 		.pipe(concat('app.js'))
 		.pipe(plumber())
