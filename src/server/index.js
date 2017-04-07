@@ -33,7 +33,7 @@ Routes.forEach(function(el) {
 		});
 	} else {
 		app[el[0]](el[1], function(req, res) {
-			res.render(el[3], {title: el[3]});
+			res.render(el[3], {title: el[4]});
 		});
 	}
 });

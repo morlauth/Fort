@@ -47,7 +47,7 @@ html, body {
 			color: rgba(0,0,0,0.4);
 		}
 		.buttons {
-			width: 50%;
+			width: 40%;
 			min-width: 300px;
 			margin: 0 auto;
 			margin-top: 2em;
@@ -76,5 +76,71 @@ html, body {
 	&.filled {
 		background: @brand_color;
 		color: #fff;
+	}
+}
+
+.auth-wrapper {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	.auth {
+		width: 410px;
+		height: auto;
+		background: #fff;
+		box-shadow: 0 2px 4px rgba(0,0,0,0.25);
+		border-radius: 3px;
+
+		.group {
+			width: 340px;
+			height: 67px;
+			margin: 0 auto;
+			margin-top: 18px;
+
+			label {
+				display: block;
+				font-size: 13px;
+				font-weight: 700;
+				text-transform: uppercase;
+				color: rgba(0,0,0,0.4);
+			}
+			input {
+				width: inherit;
+				height: 38px;
+				margin-top: 12px;
+				outline: none;
+				border: none;
+				border-bottom: solid 1px @brand_color;
+				font-size: 16px;
+				color: rgba(0,0,0,0.4);
+			}
+		}
+		button {
+			width: 340px;
+			line-height: 58px;
+			margin: 0 auto;
+			margin-top: 50px;
+			display: block;
+			background: @brand_color;
+			border: none;
+			color: #fff;
+			font-size: 16px;
+			border-radius: 3px;
+			cursor: pointer;
+		}
+		.bottom {
+			width: 340px;
+			display: block;
+			margin: 0 auto;
+			margin-top: 7px;
+			padding-bottom: 7px;
+			color: rgba(0,0,0,0.4);
+
+			a {
+				color: @brand_color;
+			}
+		}
 	}
 }

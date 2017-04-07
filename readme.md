@@ -2,7 +2,7 @@
 
 This is an app I am developing in my free time. It is also a way to practice my node.js skills.
 
-It uses a custom MVC framework which is easy to use. In the routes, you first declare the url, then the method (GET, PATH, etc.).
+It uses a custom MVC framework which is easy to use. In the routes, you first declare the method (GET, PATH, etc.), then the url.
 The third, forth and fifth options are optional, but you need at least one of them.
 ---
 If you don't want a controller and just a standard EJS page to load, then leave the third option blank and declare the name of the ejs file in the fourth option. The fifth option is then required and you MUST provide a title.
