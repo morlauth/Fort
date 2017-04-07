@@ -3,11 +3,9 @@ module.exports = {
 		var info = req.body;
 
 		if (info.fortLoggedIn) {
-			var data = JSON.stringify({d: {loggedIn: true}})
-			res.render('main.ejs', {page: 'home', d: data, title: 'Fort'});
+			res.redirect('@me');
 		} else {
-			var data = JSON.stringify({d: {loggedIn: false}});
-			res.render('main.ejs', {page: 'home', d: data, title: 'Fort'});
+			res.render('home.ejs', {title: 'Fort'});
 		}
 	}
 }
