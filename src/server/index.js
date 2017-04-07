@@ -23,13 +23,19 @@ app.set('view engine', 'ejs');
 app.set('views', __dirname + '/../views');
 
 Routes.forEach(function(el) {
-	var controller = el[2].split('@');
-	var action = controller[1];
-	var controller = require('./controllers/' + controller[0] + 'Controller');
+	if (el[2]) {
+		var controller = el[2].split('@');
+		var action = controller[1];
+		var controller = require('./controllers/' + controller[0] + 'Controller');
 
-	app[el[0]](el[1], function(req, res) {
-		controller[action](req, res);
-	});
+		app[el[0]](el[1], function(req, res) {
+			controller[action](req, res);
+		});
+	} else {
+		app[el[0]](el[1], function(req, res) {
+			res.render(el[3], {title: el[3]});
+		});
+	}
 });
 
 // Gulp compiling

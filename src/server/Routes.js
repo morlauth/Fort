@@ -1,5 +1,5 @@
 module.exports = {
 	Routes: [
-		['get', '/', 'home@index']
+		['get', '/', null, 'home.ejs', 'Fort']
 	]
 }
